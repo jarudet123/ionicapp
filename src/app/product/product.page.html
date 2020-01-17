@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ titleName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+  {{ productName }}
+  <ion-button expand="block" (click)="presentAlert()">{{ buttonName }}</ion-button> 
+  <ion-button color="danger" expand="block" (click)="cancleAlert()">ยกเลิก</ion-button> 
+  
+  <ion-button expand="block" color="success" routerLink="/product-detail">รายระเอียด</ion-button>
+
+</ion-content>
