@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>เพิ่มสินค้า</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    
+    <ion-card-content>
+      รหัสสินค้า <ion-text color="dander">*</ion-text>
+      <ion-input type="text" [(ngModel)]= "productid" autofocus></ion-input>
+      ชื่อสินค้า  <ion-text color="dander">*</ion-text>
+      <ion-input type="text" [(ngModel)]= "productname"></ion-input>
+      ราคา  <ion-text color="dander">*</ion-text>
+      <ion-input type="text" [(ngModel)]= "productprice"></ion-input>
+      รายละเอียดสินค้า <ion-text color="dander">*</ion-text>
+      <ion-input type="text" [(ngModel)]= "productdetail"></ion-input>
+      <ion-button expand="block" (click)="addproduct()">เพิ่มสินค้า</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -6,9 +6,12 @@
 
 <ion-content> 
   {{ productName }}
-  <ion-button expand="block" (click)="presentAlert()">{{ buttonName }}</ion-button> 
+  <ion-button expand="block" (click)="presentAlert()">{{ buttonName }}</ion-button>
+
   <ion-button color="danger" expand="block" (click)="cancleAlert()">ยกเลิก</ion-button> 
   
-  <ion-button expand="block" color="success" routerLink="/product-detail">รายระเอียด</ion-button>
+  <ion-button expand="block" color="warning" routerLink="/product-detail">รายระเอียด</ion-button>
+
+  <ion-button expand="block" color="success" routerLink="/add-product">เพิ่มสินค้า</ion-button>
 
 </ion-content>
