@@ -68,6 +68,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'customer',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../customer/customer.module').then(m => m.CustomerPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
