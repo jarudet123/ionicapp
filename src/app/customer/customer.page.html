@@ -1,9 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>customer</ion-title>
+    <ion-title>สมัครสมาชิกลูกค้า</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>สมัครสมาชิกลูกค้า</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      รหัสลูกค้า <ion-text color="dander">*</ion-text>
+      <ion-input type="text" [(ngModel)]= "c_id" autofocus></ion-input>
+      ชื่อ  <ion-text color="dander">*</ion-text>
+      <ion-input type="text" [(ngModel)]= "c_name"></ion-input>
+      นามสกุล  <ion-text color="dander">*</ion-text>
+      <ion-input type="text" [(ngModel)]= "c_lastnme"></ion-input>
+      ที่อยู่ <ion-text color="dander">*</ion-text>
+      <ion-input type="text" [(ngModel)]= "c_address" autofocus></ion-input>
+      โทรศัพท์ <ion-text color="dander">*</ion-text>
+      <ion-input type="text" [(ngModel)]= "c_tai" autofocus></ion-input>
+      <ion-button expand="block" (click)="register()">Register</ion-button>
+      
+    </ion-card-content>
+  </ion-card>
+  <ion-button color="success"(click)="loaddte()">Loaddate</ion-button>
 </ion-content>
