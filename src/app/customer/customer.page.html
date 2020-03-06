@@ -9,20 +9,36 @@
     <ion-card-header>
       <ion-card-title>สมัครสมาชิกลูกค้า</ion-card-title>
     </ion-card-header>
+
     <ion-card-content>
-      รหัสลูกค้า <ion-text color="dander">*</ion-text>
-      <ion-input type="text" [(ngModel)]= "c_id" autofocus></ion-input>
-      ชื่อ  <ion-text color="dander">*</ion-text>
-      <ion-input type="text" [(ngModel)]= "c_name"></ion-input>
-      นามสกุล  <ion-text color="dander">*</ion-text>
-      <ion-input type="text" [(ngModel)]= "c_lastnme"></ion-input>
-      ที่อยู่ <ion-text color="dander">*</ion-text>
-      <ion-input type="text" [(ngModel)]= "c_address" autofocus></ion-input>
-      โทรศัพท์ <ion-text color="dander">*</ion-text>
-      <ion-input type="text" [(ngModel)]= "c_tai" autofocus></ion-input>
+      รหัสลูกค้า <ion-text color="danger">*</ion-text>
+      <ion-input type="text" [(ngModel)]="input_id" autofocus></ion-input>
+      ชื่อ <ion-text color="danger">*</ion-text>
+      <ion-input type="text" [(ngModel)]="input_name" autofocus></ion-input>
+      นามสกุล <ion-text color="danger">*</ion-text>
+      <ion-input type="text" [(ngModel)]="input_lastname"></ion-input>
+      ที่อยู่ <ion-text color="danger">*</ion-text>
+      <ion-input type="text" [(ngModel)]="input_address"></ion-input>
+      โทร <ion-text color="danger">*</ion-text>
+      <ion-input type="text" [(ngModel)]="input_tel"></ion-input>
       <ion-button expand="block" (click)="register()">Register</ion-button>
-      
     </ion-card-content>
   </ion-card>
-  <ion-button color="success"(click)="loaddte()">Loaddate</ion-button>
-</ion-content>
+
+  <ion-content>
+    <ion-card>
+      <!-- <ion-card-header>
+        <ion-card-title>ข้อมูลสมาชิก </ion-card-title>
+      </ion-card-header> -->
+
+      <ion-card-content>
+        <ion-item *ngFor="let data of customers">
+          {{ data.c_id }} {{ data.c_name }} {{data.c_lastname }} 
+          <ion-button color="danger" (click)="delete_data(data.id)">x</ion-button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button color="success" (click)="loaddata()">Loaddata</ion-button>
+
+  </ion-content>
